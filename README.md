@@ -7,7 +7,8 @@
 
 <!-- badges: end -->
 
-The goal of PedAscertain is to …
+The goal of PedAscertain is to simulate pedigrees that have a dominant rare genetic variant and are at risk 
+    of onset of a disease linked to the variant.
 
 ## Installation
 
