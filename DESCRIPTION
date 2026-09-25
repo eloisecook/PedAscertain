@@ -1,0 +1,29 @@
+Package: PedAscertain
+Title: Simulate and ascertain pedigrees with a rare genetic variant linked to disease onset
+Version: 0.0.0.9000
+Authors@R: 
+    person("Eloise", "Cook", , "eejc143@gmail.com", role = c("aut", "cre"))
+Description: Simulates pedigrees who have a dominant rare genetic variant and are at risk 
+    of onset of a disease linked to the variant e.g. certain rare tumour risk syndromes (RTRS) 
+    are linked to an increased probability of rare cancer. The founder is always a carrier of 
+    the rare variant and individuals who are carriers of the rare variant have a different 
+    hazard for disease onset to non-carriers, modified using the gentetic relative 
+    risk (GRR) as a hazard multiplier. The user can specify 
+    ascertainment requirements for the pedigree, 
+    and pedigrees are ascertained by a proband who experiences disease onset within a 
+    specified time interval. This package was created for use in a simulation study 
+    to assess different ascertainment bias correcting methods in the event history analysis
+    of RTRS, which is currently in the process of being published.
+    The pedigree simulation is based on methodology 
+    used for the SimRVPedigree package described by Nieuwoudt et al. (2018).
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
+Depends: 
+    R (>= 3.5)
+LazyData: true
+Imports: 
+    dplyr,
+    PWEXP,
+    rlang

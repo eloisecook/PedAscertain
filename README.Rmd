@@ -1,0 +1,57 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# PedAscertain
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of PedAscertain is to ...
+
+## Installation
+
+You can install the development version of PedAscertain like so:
+
+Package installation can be done directly by calling 
+`devtools::install_github("eloisecook/PedAscertain")`
+
+## Example
+
+
+```{r example}
+library(PedAscertain)
+
+# Load example hazard datasets
+data("dis_haz")
+data("aff_death_haz")
+data("unaff_death_haz")
+
+# Simulate a single pedigree
+ped <- pedigree(aff = 2, frailty = 1, frail_var = 4.519, dis_haz = dis_haz, 
+                unaff_death_haz = unaff_death_haz, aff_death_haz = aff_death_haz,
+                a_start = 2005, a_end = 2025, f_start = 1885, f_end = 1935, GRR = 19)
+
+# Simulate multiple pedigrees
+peds <- multiPed(num = 10, aff = 2, frailty = 0, frail_var = NULL, dis_haz = dis_haz, 
+                 unaff_death_haz = unaff_death_haz, aff_death_haz = aff_death_haz,
+                 a_start = 2005, a_end = 2025, f_start = 1885, f_end = 1935, GRR = 19,
+                 track_ped = 0, track_full = 0)
+
+# View pedigree datasets
+ped
+peds
+
+```
+
